@@ -1,48 +1,45 @@
 {
-    "manifest_version": 3,
-    "name": "🔥 Mistral AI",
-    "version": "1.0.0",
-    "description": "Autonomous AI Agents for Crypto, Chat, Portfolio Tracking & Smart Contracts",
-    "author": "WeCanMoove Team",
-    "icons": {
-          "16": "icons/mistral-16.png",
-          "32": "icons/mistral-32.png",
-          "48": "icons/mistral-48.png",
-          "96": "icons/mistral-96.png"
-    },
-    "action": {
-          "default_popup": "popup/popup.html",
-          "default_icon": "icons/mistral-48.png",
-          "default_title": "Mistral AI - Chat & Agents"
-    },
-    "background": {
-          "service_worker": "background/service-worker.js"
-    },
-    "content_scripts": [
-          {
-                  "matches": ["<all_urls>"],
-                  "js": ["content/content-script.js"],
-                  "css": ["content/content.css"]
-          }
-    ],
-    "permissions": [
-          "tabs",
-          "scripting",
-          "activeTab",
-          "storage",
-          "webRequest"
-    ],
-    "host_permissions": [
-          "https://api.mistral.ai/*",
-          "https://*.crypto/*",
-          "https://*.ethereum/*",
-          "https://*.coinbase.com/*",
-          "https://*.uniswap.org/*"
-    ],
-    "web_accessible_resources": [
-          {
-                  "resources": ["injected/injector.js"],
-                  "matches": ["<all_urls>"]
-          }
-    ]
+  "manifest_version": 3,
+  "name": "🔥 Mistral AI Assistant",
+  "version": "1.0.0",
+  "description": "Chat avec Mistral AI directement dans Firefox",
+  "author": "WeCanMoove Team",
+  "icons": {
+    "16": "icons/mistral-16.png",
+    "32": "icons/mistral-32.png",
+    "48": "icons/mistral-48.png",
+    "96": "icons/mistral-96.png"
+  },
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": "icons/mistral-48.png",
+    "default_title": "Mistral AI - Chat & Assistants"
+  },
+  "background": {
+    "service_worker": "background/service-worker.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content/content-script.js"],
+      "css": ["content/content.css"]
+    }
+  ],
+  "permissions": [
+    "tabs",
+    "scripting",
+    "activeTab",
+    "storage",
+    "contextMenus"
+  ],
+  "host_permissions": [
+    "https://api.mistral.ai/*",
+    "https://*.mistral.ai/*"
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "mistral-ai@wecanmoove.com",
+      "strict_min_version": "109.0"
+    }
+  }
 }
