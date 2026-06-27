@@ -1,0 +1,23 @@
+{
+  "name": "mistral-firefox-extension",
+  "version": "1.0.0",
+  "description": "🔥 Extension Firefox pour Mistral AI - Chat & Assistants",
+  "author": "WeCanMoove Team",
+  "license": "MIT",
+  "scripts": {
+    "setup": "bash scripts/setup.sh",
+    "build": "bash scripts/build.sh",
+    "test": "bash scripts/test.sh",
+    "dev": "web-ext run -s ."
+  },
+  "devDependencies": {
+    "web-ext": "^7.6.2"
+  },
+  "keywords": [
+    "firefox",
+    "extension",
+    "mistral-ai",
+    "chat",
+    "ai-assistant"
+  ]
+}
