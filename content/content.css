@@ -1,0 +1,11 @@
+.mistral-ai-tooltip {
+  position: fixed;
+  background-color: #ff6b35;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 4px;
+  font-size: 12px;
+  z-index: 10000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  pointer-events: none;
+}
