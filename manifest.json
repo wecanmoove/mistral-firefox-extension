@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "name": "🔥 Mistral AI Assistant",
-  "version": "1.0.0",
-  "description": "Chat avec Mistral AI directement dans Firefox",
+  "version": "1.1.0",
+  "description": "Assistant Mistral AI avec panneau latéral : chat, résumé et analyse de la page courante",
   "author": "WeCanMoove Team",
   "icons": {
     "16": "icons/mistral-16.png",
@@ -13,7 +13,12 @@
   "action": {
     "default_popup": "popup/popup.html",
     "default_icon": "icons/mistral-48.png",
-    "default_title": "Mistral AI - Chat & Assistants"
+    "default_title": "Mistral AI - Chat & Assistant"
+  },
+  "sidebar_action": {
+    "default_panel": "sidebar/sidebar.html",
+    "default_icon": "icons/mistral-48.png",
+    "default_title": "Mistral AI Assistant"
   },
   "background": {
     "service_worker": "background/service-worker.js"
@@ -25,6 +30,14 @@
       "css": ["content/content.css"]
     }
   ],
+  "commands": {
+    "_execute_sidebar_action": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+M"
+      },
+      "description": "Ouvrir l'assistant Mistral AI"
+    }
+  },
   "permissions": [
     "tabs",
     "scripting",
